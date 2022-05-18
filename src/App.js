@@ -2,12 +2,15 @@ import React from 'react';
 import './App.css';
 import Contador from './componentes/Contador';
 import Cabecalho from './componentes/Cabecalho';
+import { ContadorProvider } from './ContadorContexto';
 
 function App() {
   return (
     <div className='App'>
-      <Cabecalho></Cabecalho>
-      <Contador></Contador>
+      <ContadorProvider>
+        <Cabecalho></Cabecalho>
+        <Contador></Contador>
+      </ContadorProvider>
     </div>
   );
 }
